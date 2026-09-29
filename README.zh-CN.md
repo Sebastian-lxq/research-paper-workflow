@@ -3,7 +3,7 @@
 [![CI](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml)
 [![Tag](https://img.shields.io/github/v/tag/XuQingAcademic/research-paper-workflow?label=tag)](https://github.com/XuQingAcademic/research-paper-workflow/tags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3da9fc.svg)](LICENSE)
-[![skills.sh](https://skills.sh/b/XuQingAcademic/research-paper-workflow)](https://skills.sh/XuQingAcademic/research-paper-workflow)
+[![skills.sh compatible](https://img.shields.io/badge/skills.sh-compatible-14b8a6.svg)](https://www.skills.sh/docs)
 
 [English](README.md) · [更新记录](CHANGELOG.md) ·
 [安全策略](SECURITY.md) · [隐私说明](PRIVACY.md) ·

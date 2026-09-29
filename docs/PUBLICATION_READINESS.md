@@ -47,6 +47,17 @@
       secret scanning, push protection, and private vulnerability reporting.
 - [x] Run the GitHub Actions matrix and inspect its actual results.
 - [x] Verify the first tag artifact's GitHub provenance attestation.
+- [x] Publish a formal v0.1.1 GitHub Release with ZIP, external checksum,
+      release notes, and verified provenance.
+- [x] Deploy the public GitHub Pages site and enable repository Discussions.
+- [x] Open the public pilot recruitment in
+      [Discussion #2](https://github.com/XuQingAcademic/research-paper-workflow/discussions/2).
+- [x] Submit the skill to `awesome_codex_skills` in
+      [Issue #12](https://github.com/flaqai/awesome_codex_skills/issues/12).
+- [ ] Confirm `skills.sh` has completed asynchronous public indexing after the
+      verified CLI installation event; do not display its install-count badge
+      while the badge reports `resource not found`.
+- [ ] Wait for the third-party `awesome_codex_skills` curator's decision.
 - [x] Install from the Git-backed marketplace with no prior copy of this
       marketplace or plugin in the Codex profile.
 - [ ] Complete OpenAI developer verification, create the external submission,
