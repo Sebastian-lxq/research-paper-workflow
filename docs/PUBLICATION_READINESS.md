@@ -38,8 +38,9 @@
 - [x] Create the initial commit, push the repository, and enable required CI,
       secret scanning, push protection, and private vulnerability reporting.
 - [x] Run the GitHub Actions matrix and inspect its actual results.
-- [ ] Verify the first tag artifact's GitHub provenance attestation.
-- [ ] Install from the Git-backed marketplace in a clean Codex environment.
+- [x] Verify the first tag artifact's GitHub provenance attestation.
+- [x] Install from the Git-backed marketplace with no prior copy of this
+      marketplace or plugin in the Codex profile.
 - [ ] Submit to the universal Plugins Directory only when the maintainer wants
       public directory publication.
 
