@@ -28,16 +28,16 @@
 
 ## Requires repository-owner input or an external action
 
-- [ ] Choose the GitHub owner/repository name and add the remote URL.
+- [x] Choose the GitHub owner/repository name and add the remote URL.
 - [x] Configure the initial Git commit identity. A public display name and the
       repository owner's GitHub `noreply` address are sufficient; this is separate
       from `CITATION.cff` and does not require publishing a personal email.
 - [x] Replace generic publisher metadata with the selected public publisher.
 - [x] Add public HTTPS URLs for website, privacy policy, and terms to the OpenAI
       interface metadata after the repository exists.
-- [ ] Create the initial commit, push the repository, and enable required CI,
+- [x] Create the initial commit, push the repository, and enable required CI,
       secret scanning, push protection, and private vulnerability reporting.
-- [ ] Run the GitHub Actions matrix and inspect its actual results.
+- [x] Run the GitHub Actions matrix and inspect its actual results.
 - [ ] Verify the first tag artifact's GitHub provenance attestation.
 - [ ] Install from the Git-backed marketplace in a clean Codex environment.
 - [ ] Submit to the universal Plugins Directory only when the maintainer wants
