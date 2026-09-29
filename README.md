@@ -1,7 +1,7 @@
 # Research Paper Workflow
 
 [![CI](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/XuQingAcademic/research-paper-workflow?display_name=tag)](https://github.com/XuQingAcademic/research-paper-workflow/releases)
+[![Tag](https://img.shields.io/github/v/tag/XuQingAcademic/research-paper-workflow?label=tag)](https://github.com/XuQingAcademic/research-paper-workflow/tags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3da9fc.svg)](LICENSE)
 
 [简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) ·
