@@ -11,7 +11,7 @@ Last local and hosted-CI verification: 2026-09-29.
 | macOS Python | 3.10, 3.13 | [GitHub Actions CI run 36582213072](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36582213072) | Passed |
 | GitHub CodeQL | Python source scan | [CodeQL run 36582213075](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36582213075) | Passed |
 | GitHub release artifact | `v0.1.1` | [Packaging run 36582960420](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36582960420); external SHA-256, internal manifest, and GitHub provenance verified for digest `905d19646d3dca1a2572386ffb1cbef4c431bb16c5f076a5570617c644095dcd` | Passed |
-| GitHub Pages | Deployed from `site/` by GitHub Actions | [Pages run 36582213046](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36582213046); public URL returned HTTP 200 with the expected demo and case-study links | Passed |
+| GitHub Pages | Deployed from `site/` by GitHub Actions | [Pages run 36582213046](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36582213046); public URL returned HTTP 200; the current site exposes detailed capability and case-study links | Passed |
 | skills.sh CLI | 1.7.0 | Discovered the nested skill without `--full-depth`; installed the public GitHub source into an isolated project with scripts and references present | Passed; public directory indexing remains pending |
 | ChatGPT desktop local marketplace | Current supported client | Repo marketplace prepared | Pending installation test |
 | Universal Plugins Directory | Public submission | Portable ZIP prepared | Not submitted |

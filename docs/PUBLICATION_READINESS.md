@@ -10,8 +10,9 @@
 - [x] Software citation uses the maintainer's public GitHub identity and public
       contact email; ORCID remains optional and omitted, and no companion paper
       is required.
-- [x] Two-command Git-backed installation and bilingual 60-second walkthrough.
-- [x] A 60-second animated synthetic demo and a standalone GitHub Pages site.
+- [x] Two-command Git-backed installation and bilingual detailed capability guide.
+- [x] A standalone GitHub Pages site with capability, stage, evidence-boundary,
+      installation, and pilot sections.
 - [x] An isolated `skills.sh` CLI discovery and installation check for the
       packaged `SKILL.md` tree.
 - [x] A public pilot guide, dedicated feedback form, and reusable bilingual

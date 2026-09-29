@@ -80,25 +80,38 @@ npx skills add XuQingAcademic/research-paper-workflow --skill research-paper-wor
 This route installs the workflow skill and its referenced files; the Codex
 plugin command above additionally installs the repository's plugin metadata.
 
-## 60-second tour: input → process → deliverables
+## What the workflow actually does
 
-![A 60-second synthetic demonstration of Research Paper Workflow moving from a broad research direction to evidence gaps, gated branches, resumable state, and a bounded next action.](docs/assets/workflow-demo.gif)
+The workflow is an orchestration and evidence-control layer. It does not replace
+the specialist that searches literature, proves a theorem, audits a simulation,
+or estimates a model. It decides what evidence is required, which work can move
+now, which work must wait, and what must be preserved so the project can resume
+without silently changing its scientific claims.
 
-```mermaid
-flowchart LR
-    A["Input<br/>research direction<br/>+ existing artifacts"]
-    B["Inspect<br/>project state and<br/>evidence gaps"]
-    C["Coordinate<br/>ideas · literature · design<br/>proofs · data · simulation"]
-    D["Gate<br/>block unsupported claims<br/>continue safe branches"]
-    E["Deliver<br/>next action · handoffs<br/>resumable state · release status"]
-    A --> B --> C --> D --> E
-```
+| Capability | What it does | Inspectable output |
+| --- | --- | --- |
+| Project intake | Reads the current manuscript, code, state, instructions, and available results; provisionally classifies the paper as theory, methods, empirical, or hybrid | Current objective, paper type, available artifacts, and first unmet requirement |
+| Idea discovery | Builds materially different candidate mechanisms, attaches nearest-neighbor search needs, cheap falsifiers, decision criteria, and reopen conditions | Candidate portfolio rather than a single prematurely selected idea |
+| Literature governance | Separates retrieved, screened, and deeply read sources; prevents unverified abstracts or search snippets from supporting novelty language | Search frontier, coverage gaps, source status, and bounded novelty wording |
+| Research design | Freezes the estimand, target population, identification logic, assumptions, comparison set, and the evidence needed for each intended claim | Design contract and explicit dependencies between claims and evidence |
+| Theory and proof handoff | Routes theorem work to an installed specialist and exchanges hash-bound lineage summaries without copying a second proof truth store | Theorem interfaces, dependency graph, proof status, and unresolved obligations |
+| Empirical evidence | Keeps data provenance, estimation contract, diagnostics, robustness checks, and claim permissions distinct | Result contract showing what an empirical artifact may and may not support |
+| Simulation control | Distinguishes smoke, pilot, and production runs; records real offline-job handles and solver failures; blocks result-dependent prose while a run is incomplete | Registered job, wait state, resume condition, failure lineage, and result scope |
+| Writing and citation control | Allows structure and source-bounded prose to continue while withholding sentences that depend on missing literature, proofs, or results | Manuscript permissions, unresolved citation needs, and claim-level blockers |
+| Independent review | Checks scientific dependencies, evidence ceilings, reproducibility, and release claims separately from schema validity | Review findings and a bounded release decision rather than a generic pass |
+| Continuous revision | Defines what must improve, what cannot regress, acceptable trade-offs, paired before/after evidence, rollback conditions, and a final whole-paper review | Non-regression contract and auditable revision decision |
+| Resumable state | Persists versioned stage status, next safe action, blocker, job handle, and reopen condition under `.paper/workflow/` | Compact state that can be resumed across sessions without recreating finished work |
+| Reproducible delivery | Separates structural checks from scientific readiness and packages verified public artifacts with deterministic hashes and provenance | Release status, checksum, manifest, and explicit remaining limitations |
 
-| Moment | What the user supplies | What the workflow does | What becomes inspectable |
-| --- | --- | --- | --- |
-| 0–15 s | A question, project brief, or existing paper | Classifies the project provisionally and reads current artifacts | The first unresolved evidence requirement |
-| 15–40 s | Existing literature, proofs, code, and results if available | Routes only to installed specialist capabilities and preserves missing dependencies | Candidate routes, blockers, and bounded next actions |
-| 40–60 s | No additional input is required for safe setup work | Records resumable state and prevents result-dependent claims from moving early | `.paper/workflow/plan.json`, stage status, and explicit pending gates |
+### Execution model
+
+1. Inspect existing evidence before proposing work.
+2. Freeze the immediate objective and the evidence each claim requires.
+3. Route only to specialist capabilities that are actually installed.
+4. Continue branches that remain valid under plausible future results.
+5. Keep dependent work pending when literature, proof, data, or simulation is missing.
+6. Persist the next action, blocker, and resume condition instead of treating a
+   partial run as completion.
 
 Try the synthetic, privacy-safe example in
 [`examples/minimal-paper`](examples/minimal-paper/README.md), or run its

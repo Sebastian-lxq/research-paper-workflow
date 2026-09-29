@@ -5,6 +5,9 @@ All notable changes to this project are documented here. The project follows
 
 ## [Unreleased]
 
+- Remove the animated promotional asset and its render script; replace the
+  short tour with detailed bilingual capability documentation on GitHub and the
+  project site.
 - Add portable companion-skill installation once their public repositories are available.
 - Add externally judged and second-host validation evidence.
 

@@ -1,5 +1,9 @@
 # Research Paper Workflow v0.1.1
 
+> The animated promotional asset originally shipped with this tagged source was
+> removed from the current main branch. The live project site and README now use
+> detailed capability documentation instead.
+
 This release turns the initial Research Preview into a complete public entry
 point: a new user can understand the boundary of the project, install it from
 GitHub, inspect a 60-second synthetic demonstration, reproduce the structural

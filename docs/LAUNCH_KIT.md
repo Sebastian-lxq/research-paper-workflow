@@ -20,9 +20,9 @@ beyond the evidence that exists.
 
 The orchestration layer is general, while the deepest current routes and
 interfaces focus on econometrics, statistics, and quantitative economics. The
-repository includes a 60-second synthetic demo, a two-command Codex install,
-an open `SKILL.md` installation path, deterministic release archives, and a
-public pilot for early users.
+repository includes a detailed capability map, a two-command Codex install, an
+open `SKILL.md` installation path, deterministic release archives, and a public
+pilot for early users.
 
 Project: https://github.com/XuQingAcademic/research-paper-workflow
 
@@ -33,8 +33,9 @@ Project: https://github.com/XuQingAcademic/research-paper-workflow
 可恢复的工作流，并阻止下游表述超出当前真实证据。
 
 编排框架本身面向一般定量研究，目前最深入的专门路由与接口集中在计量经济学、
-统计方法和数量经济学。仓库已经提供 60 秒合成演示、两行 Codex 安装命令、开放
-`SKILL.md` 安装路径、可复核发布包和首批用户试用计划。
+统计方法和数量经济学。仓库已经详细说明 idea、文献、证明、实证、模拟、写作、
+复核和发布功能，并提供两行 Codex 安装命令、开放 `SKILL.md` 安装路径、可复核
+发布包和首批用户试用计划。
 
 项目地址：https://github.com/XuQingAcademic/research-paper-workflow
 
@@ -55,7 +56,7 @@ The project is an MIT-licensed Research Preview. It does not promise novelty,
 theorem correctness, identification, publication, or exhaustive search. Instead,
 it makes the missing evidence and next safe action inspectable.
 
-The repository includes a 60-second synthetic demo and a 20-minute pilot path:
+The repository includes a detailed capability map and a 20-minute pilot path:
 https://github.com/XuQingAcademic/research-paper-workflow
 
 Feedback from researchers and research-tool builders is welcome.
@@ -64,7 +65,7 @@ Feedback from researchers and research-tool builders is welcome.
 
 Released: Research Paper Workflow—an open-source Agent Plugin that coordinates
 quantitative research without letting claims outrun evidence. General workflow;
-first-class econometrics support. 60-second demo + reproducible package + pilot:
+first-class econometrics support. Detailed capability map + reproducible package + pilot:
 https://github.com/XuQingAcademic/research-paper-workflow
 
 ## Community post
@@ -82,10 +83,10 @@ and a structurally valid record is not presented as scientific validation. The
 current reference domain is econometrics, but the orchestration and state layer
 is designed to be extensible.
 
-The repository includes a synthetic example and a 60-second demo, so the core
-behavior can be inspected without private research material. I would especially
-value reports about installation friction, incorrect routing, state/resume
-behavior, and places where the evidence boundary is unclear.
+The repository includes a synthetic example and a claim-by-claim capability
+map, so the core behavior can be inspected without private research material.
+I would especially value reports about installation friction, incorrect routing,
+state/resume behavior, and places where the evidence boundary is unclear.
 
 Repository: https://github.com/XuQingAcademic/research-paper-workflow
 
@@ -100,10 +101,8 @@ behavior. No unpublished material is required.
 Pilot guide:
 https://github.com/XuQingAcademic/research-paper-workflow/blob/main/docs/PILOT_PROGRAM.md
 
-## Recommended screenshots and links
+## Recommended links
 
-- Demo: `docs/assets/workflow-demo.gif`
-- Social preview: `docs/assets/workflow-demo-poster.png`
 - Project site: https://xuqingacademic.github.io/research-paper-workflow/
 - Quick start: https://github.com/XuQingAcademic/research-paper-workflow/blob/main/docs/QUICKSTART.md
 - Synthetic case study: https://github.com/XuQingAcademic/research-paper-workflow/blob/main/docs/SYNTHETIC_CASE_STUDY.md

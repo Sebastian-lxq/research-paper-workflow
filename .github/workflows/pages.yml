@@ -6,8 +6,6 @@ on:
       - main
     paths:
       - "site/**"
-      - "docs/assets/workflow-demo.gif"
-      - "docs/assets/workflow-demo-poster.png"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -30,10 +28,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Assemble static site
         run: |
-          mkdir -p _site/assets
+          mkdir -p _site
           cp -R site/. _site/
-          cp docs/assets/workflow-demo.gif _site/assets/workflow-demo.gif
-          cp docs/assets/workflow-demo-poster.png _site/assets/workflow-demo-poster.png
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
