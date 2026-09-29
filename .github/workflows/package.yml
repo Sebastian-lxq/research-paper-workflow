@@ -1,0 +1,41 @@
+name: Package plugin
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+  artifact-metadata: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Run checks
+        run: python3 scripts/run_checks.py
+      - name: Build plugin archive
+        run: python3 scripts/package_plugin.py
+      - name: Attest plugin archive
+        if: github.event.repository.visibility == 'public'
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/*.zip
+      - name: Upload plugin archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-paper-workflow-plugin
+          path: |
+            dist/*.zip
+            dist/*.zip.sha256
+          if-no-files-found: error

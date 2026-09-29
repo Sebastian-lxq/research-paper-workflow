@@ -1,0 +1,20 @@
+{
+  "name": "research-paper-workflows",
+  "interface": {
+    "displayName": "Research Paper Workflow"
+  },
+  "plugins": [
+    {
+      "name": "research-paper-workflow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/research-paper-workflow"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

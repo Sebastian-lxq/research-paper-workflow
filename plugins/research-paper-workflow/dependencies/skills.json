@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "workflow_version": "0.1.0",
+  "resolution_policy": {
+    "discover_at_runtime": true,
+    "never_assume_installed": true,
+    "missing_provider_behavior": "continue only work that does not require the missing capability and report the bounded gap",
+    "provider_health_is_not_scientific_validation": true
+  },
+  "first_party_companion_interfaces": [
+    {
+      "name": "mine-econometrics-ideas",
+      "capability": "candidate idea generation, overlap checks, and feasibility probes",
+      "bundled": false,
+      "required_for": "the workflow's specialized idea-mining protocol"
+    },
+    {
+      "name": "prove-econometrics-theory-v2",
+      "capability": "econometric theorem formulation, proof, falsification, lineage export, and release auditing",
+      "bundled": false,
+      "required_for": "specialist proof-release claims; the bundled workflow accepts only its bounded proof-lineage projection"
+    },
+    {
+      "name": "audit-numerical-simulations-v2",
+      "capability": "Monte Carlo design, implementation, lineage, precision, and release auditing",
+      "bundled": false,
+      "required_for": "specialist simulation-release claims"
+    },
+    {
+      "name": "write-econometrics-paper-v3",
+      "capability": "evidence-ceiling manuscript drafting, revision, and release auditing",
+      "bundled": false,
+      "required_for": "specialist manuscript-release claims"
+    }
+  ],
+  "third_party_skill_integrations": [
+    {
+      "name": "paper-lookup",
+      "capability": "scholarly discovery and retrieval provenance",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "1e5eeffbdad3749125afe7ab48a39694e27f181c",
+      "subpath": "skills/paper-lookup",
+      "license": "MIT",
+      "bundled": false
+    },
+    {
+      "name": "citation-management",
+      "capability": "scholarly metadata and bibliography verification",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "1e5eeffbdad3749125afe7ab48a39694e27f181c",
+      "subpath": "skills/citation-management",
+      "license": "MIT",
+      "bundled": false
+    },
+    {
+      "name": "deepread",
+      "capability": "claim, evidence, and argument reconstruction from supplied sources",
+      "repository": "https://github.com/alirezarezvani/claude-skills",
+      "revision": "19392f7a08264ed00486a251f5b2098321771f94",
+      "subpath": "research/deepread",
+      "license": "MIT",
+      "bundled": false
+    },
+    {
+      "name": "review-paper",
+      "capability": "independent economics-paper review",
+      "repository": "https://github.com/claesbackman/AI-research-feedback",
+      "revision": "8abc36b5576eca04611b4d632260caace5f1a3b7",
+      "subpath": "Skills/review-paper",
+      "license": "MIT",
+      "bundled": false,
+      "invocation": "explicit"
+    },
+    {
+      "name": "review-paper-code",
+      "capability": "paper-to-code reproducibility review",
+      "repository": "https://github.com/claesbackman/AI-research-feedback",
+      "revision": "8abc36b5576eca04611b4d632260caace5f1a3b7",
+      "subpath": "Skills/review-paper-code",
+      "license": "MIT",
+      "bundled": false,
+      "invocation": "explicit"
+    },
+    {
+      "name": "audit-analysis",
+      "capability": "adversarial analysis-code review",
+      "repository": "https://github.com/claesbackman/AI-research-feedback",
+      "revision": "8abc36b5576eca04611b4d632260caace5f1a3b7",
+      "subpath": "Skills/audit-analysis",
+      "license": "MIT",
+      "bundled": false,
+      "invocation": "explicit"
+    },
+    {
+      "name": "humanizer",
+      "capability": "optional removal of formulaic AI prose after claims stabilize",
+      "repository": "https://github.com/blader/humanizer",
+      "revision": "9862685f575c65a8247f90369951df1b3416e3d6",
+      "subpath": ".",
+      "license": "MIT",
+      "bundled": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Research Paper Workflow"
+  short_description: "从 idea 到论文交付，连接文献、理论、实证、模拟与独立复核"
+  default_prompt: "请用 $research-paper-workflow 推进当前论文，从实际已有材料续接；帮助提出和筛选 idea，完成可完成的研究与写作，正式模拟算力不足时交付可运行交接包并保留待验证主张。"
+policy:
+  allow_implicit_invocation: true

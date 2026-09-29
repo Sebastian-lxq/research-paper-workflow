@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "release_series": "0.1.x",
+  "policy": "preview-no-silent-mutation",
+  "schemas": [
+    {
+      "identifier": "research-handoff-check.v1",
+      "owner": "skills/research-paper-workflow/scripts/check_release_handoff.py",
+      "marker": "\"research-handoff-check.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-handoff-edges.v1",
+      "owner": "skills/research-paper-workflow/scripts/check_release_handoff.py",
+      "marker": "\"research-handoff-edges.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-content-bindings.v1",
+      "owner": "skills/research-paper-workflow/scripts/content_bindings.py",
+      "marker": "\"research-content-bindings.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-content-bindings-report.v1",
+      "owner": "skills/research-paper-workflow/scripts/content_bindings.py",
+      "marker": "\"research-content-bindings-report.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "empirical-result-contract.v1",
+      "owner": "skills/research-paper-workflow/scripts/empirical_contract.py",
+      "marker": "\"empirical-result-contract.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "empirical-result-contract-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/empirical_contract.py",
+      "marker": "\"empirical-result-contract-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "proof-lineage-manifest.v1",
+      "owner": "skills/research-paper-workflow/scripts/proof_lineage.py",
+      "marker": "\"proof-lineage-manifest.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "proof-lineage-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/proof_lineage.py",
+      "marker": "\"proof-lineage-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-idea-portfolio.v1",
+      "owner": "skills/research-paper-workflow/scripts/idea_portfolio.py",
+      "marker": "\"research-idea-portfolio.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-idea-portfolio-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/idea_portfolio.py",
+      "marker": "\"research-idea-portfolio-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-operation-event.v1",
+      "owner": "skills/research-paper-workflow/scripts/research_operations.py",
+      "marker": "\"research-operation-event.v1\"",
+      "role": "persistent-state",
+      "lifecycle": "legacy-compatible",
+      "compatibility": "accepted-and-written",
+      "superseded_by": "research-operation-event.v2"
+    },
+    {
+      "identifier": "research-operation-event.v2",
+      "owner": "skills/research-paper-workflow/scripts/research_operations.py",
+      "marker": "\"research-operation-event.v2\"",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-written",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-operations-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/research_operations.py",
+      "marker": "\"research-operations-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "legacy-compatible",
+      "compatibility": "generated-from-legacy-state",
+      "superseded_by": "research-operations-status.v2"
+    },
+    {
+      "identifier": "research-operations-status.v2",
+      "owner": "skills/research-paper-workflow/scripts/research_operations.py",
+      "marker": "\"research-operations-status.v2\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-resume-adapter.v1",
+      "owner": "skills/research-paper-workflow/scripts/resume_view.py",
+      "marker": "\"research-resume-adapter.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-resume-view.v1",
+      "owner": "skills/research-paper-workflow/scripts/resume_view.py",
+      "marker": "\"research-resume-view.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated-and-readable",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-resume-freshness.v1",
+      "owner": "skills/research-paper-workflow/scripts/resume_view.py",
+      "marker": "\"research-resume-freshness.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "review-handoff-spec.v1",
+      "owner": "skills/research-paper-workflow/scripts/review_handoff.py",
+      "marker": "\"review-handoff-spec.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "review-handoff-criteria.v1",
+      "owner": "skills/research-paper-workflow/scripts/review_handoff.py",
+      "marker": "\"review-handoff-criteria.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-sealed",
+      "superseded_by": null
+    },
+    {
+      "identifier": "review-handoff-evidence.v1",
+      "owner": "skills/research-paper-workflow/scripts/review_handoff.py",
+      "marker": "\"review-handoff-evidence.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-sealed",
+      "superseded_by": null
+    },
+    {
+      "identifier": "review-handoff-controller.v1",
+      "owner": "skills/research-paper-workflow/scripts/review_handoff.py",
+      "marker": "\"review-handoff-controller.v1\"",
+      "role": "internal-control",
+      "lifecycle": "internal",
+      "compatibility": "implementation-owned",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-contract.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-contract.v1\"",
+      "role": "input-contract",
+      "lifecycle": "legacy-compatible",
+      "compatibility": "read-existing-state-only",
+      "superseded_by": "paper-revision-contract.v2"
+    },
+    {
+      "identifier": "paper-revision-contract.v2",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-contract.v2\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-issues.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-issues.v1\"",
+      "role": "input-contract",
+      "lifecycle": "legacy-compatible",
+      "compatibility": "read-existing-state-only",
+      "superseded_by": "paper-revision-issues.v2"
+    },
+    {
+      "identifier": "paper-revision-issues.v2",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-issues.v2\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-cycle.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-cycle.v1\"",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-written",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-event.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-event.v1\"",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-written",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-review.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-review.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-retrospective.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-retrospective.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-non-regression-report.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-non-regression-report.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revision-cycle-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "\"paper-revision-cycle-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-token-evaluation.v1",
+      "owner": "skills/research-paper-workflow/scripts/token_evaluation.py",
+      "marker": "\"research-token-evaluation.v1\"",
+      "role": "input-contract",
+      "lifecycle": "current",
+      "compatibility": "accepted",
+      "superseded_by": null
+    },
+    {
+      "identifier": "research-token-evaluation-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/token_evaluation.py",
+      "marker": "\"research-token-evaluation-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-workflow-plan.v1",
+      "owner": "skills/research-paper-workflow/scripts/workflow_state.py",
+      "marker": "\"paper-workflow-plan.v1\"",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-written",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-workflow-status.v1",
+      "owner": "skills/research-paper-workflow/scripts/workflow_state.py",
+      "marker": "\"paper-workflow-status.v1\"",
+      "role": "derived-report",
+      "lifecycle": "current",
+      "compatibility": "generated",
+      "superseded_by": null
+    }
+  ],
+  "local_integer_formats": [
+    {
+      "identifier": "exploration-probe-run@1",
+      "owner": "skills/research-paper-workflow/scripts/exploration_probe.py",
+      "marker": "record = {\"schema_version\": 1, \"id\": probe_id",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "written-and-read-locally",
+      "superseded_by": null
+    },
+    {
+      "identifier": "exploration-probe-decision@1",
+      "owner": "skills/research-paper-workflow/scripts/exploration_probe.py",
+      "marker": "event = {\"schema_version\": 1, \"recorded_at\": timestamp()",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "written-locally",
+      "superseded_by": null
+    },
+    {
+      "identifier": "paper-revisions-ledger@1",
+      "owner": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "marker": "ledger.get(\"schema_version\") != 1",
+      "role": "persistent-state",
+      "lifecycle": "current",
+      "compatibility": "accepted-and-written",
+      "superseded_by": null
+    }
+  ]
+}

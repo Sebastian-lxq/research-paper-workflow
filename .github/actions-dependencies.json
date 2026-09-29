@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "dependencies": [
+    {
+      "uses": "actions/checkout@v7",
+      "repository": "https://github.com/actions/checkout",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "actions/setup-python@v7",
+      "repository": "https://github.com/actions/setup-python",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "actions/upload-artifact@v4",
+      "repository": "https://github.com/actions/upload-artifact",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "github/codeql-action/init@v4",
+      "repository": "https://github.com/github/codeql-action",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "github/codeql-action/analyze@v4",
+      "repository": "https://github.com/github/codeql-action",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "actions/attest@v4",
+      "repository": "https://github.com/actions/attest",
+      "license": "MIT",
+      "scope": "ci-only"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Research Paper Workflow 0.1.0
+Copyright (c) 2026 Sebastian-lxq and contributors
+
+This repository does not bundle implementation code copied from the third-party
+skills and projects listed in THIRD_PARTY.md. It integrates with some separately
+installed skills by name and reimplements selected workflow mechanisms after
+public-source inspection. Those upstream projects retain their own copyrights
+and licenses.
+
+If future contributions copy or modify upstream implementation code, the
+contributor must update THIRD_PARTY.md and include every notice required by the
+upstream license before the change can be released.

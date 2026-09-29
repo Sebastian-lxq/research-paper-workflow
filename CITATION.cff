@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this workflow in research, please cite this software release."
+title: "Research Paper Workflow"
+type: software
+version: 0.1.0
+date-released: 2026-09-29
+license: MIT
+authors:
+  - name: "Sebastian-lxq"
+repository-code: "https://github.com/Sebastian-lxq/research-paper-workflow"
+url: "https://github.com/Sebastian-lxq/research-paper-workflow"
+abstract: >-
+  An evidence-grounded orchestration plugin for quantitative research papers,
+  covering idea discovery, literature, design, theory, empirical evidence,
+  simulation, writing, review, revision, and reproducible delivery.
+keywords:
+  - econometrics
+  - statistics
+  - research workflow
+  - reproducibility

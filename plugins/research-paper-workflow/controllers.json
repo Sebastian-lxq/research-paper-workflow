@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "controllers": [
+    {
+      "name": "workflow-state",
+      "path": "skills/research-paper-workflow/scripts/workflow_state.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Initialize, append, and inspect project-local workflow receipts."
+    },
+    {
+      "name": "revision-cycle",
+      "path": "skills/research-paper-workflow/scripts/revision_cycle.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Run a single-active continuous revision queue with non-regression evidence."
+    },
+    {
+      "name": "resume-view",
+      "path": "skills/research-paper-workflow/scripts/resume_view.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Build or check a read-only projection of existing project decisions and feedback."
+    },
+    {
+      "name": "release-handoff",
+      "path": "skills/research-paper-workflow/scripts/check_release_handoff.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Check transitive certificate dependencies and declared release eligibility."
+    },
+    {
+      "name": "review-handoff",
+      "path": "skills/research-paper-workflow/scripts/review_handoff.py",
+      "kind": "cli",
+      "exit_codes": [0, 2],
+      "purpose": "Prepare and verify an evidence-first material re-review packet."
+    },
+    {
+      "name": "exploration-probe",
+      "path": "skills/research-paper-workflow/scripts/exploration_probe.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2, 124],
+      "purpose": "Run one explicitly authorized bounded local probe and record its decision."
+    },
+    {
+      "name": "idea-portfolio",
+      "path": "skills/research-paper-workflow/scripts/idea_portfolio.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Validate candidate diversity, search frontiers, probes, and reopen conditions."
+    },
+    {
+      "name": "research-operations",
+      "path": "skills/research-paper-workflow/scripts/research_operations.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Append operation telemetry and enforce handle-bound dependency waits."
+    },
+    {
+      "name": "empirical-contract",
+      "path": "skills/research-paper-workflow/scripts/empirical_contract.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Validate data, adapter, fixture, inference, diagnostic, and interpretation bindings."
+    },
+    {
+      "name": "proof-lineage",
+      "path": "skills/research-paper-workflow/scripts/proof_lineage.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Validate a hash-bound proof-lineage projection without certifying theorem truth or reviewer independence."
+    },
+    {
+      "name": "token-evaluation",
+      "path": "skills/research-paper-workflow/scripts/token_evaluation.py",
+      "kind": "cli",
+      "exit_codes": [0, 1, 2],
+      "purpose": "Audit measured token reductions against frozen protected quality checks."
+    },
+    {
+      "name": "companion-check",
+      "path": "scripts/check_companions.py",
+      "kind": "cli",
+      "exit_codes": [0, 2],
+      "purpose": "Report companion-skill availability without claiming scientific validation."
+    },
+    {
+      "name": "content-bindings",
+      "path": "skills/research-paper-workflow/scripts/content_bindings.py",
+      "kind": "library",
+      "exit_codes": [],
+      "purpose": "Provide reusable regular-file, fragment, hash, and path-binding validation."
+    }
+  ]
+}

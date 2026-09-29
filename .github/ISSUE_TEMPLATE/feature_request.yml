@@ -1,0 +1,31 @@
+name: Feature request
+description: Propose a scoped capability or workflow improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Research workflow problem
+      description: Describe the observable gap, not only a proposed implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evaluation evidence
+      description: What fixture or behavior would show that the change helps without regression?
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Related projects or skills
+      description: Include exact links and licenses if the proposal draws on another implementation.
