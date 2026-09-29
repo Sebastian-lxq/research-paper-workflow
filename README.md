@@ -11,14 +11,16 @@
 [CLI exit codes](docs/EXIT_CODES.md) ·
 [Third-party provenance](THIRD_PARTY.md)
 
-Turn a research direction into an auditable quantitative-paper workflow without
-losing literature evidence, proof gaps, simulation state, or revision history.
+A general, evidence-grounded research-paper workflow with first-class support
+for econometrics and quantitative economics.
 
-Research Paper Workflow is an evidence-grounded Agent Plugin for econometrics,
-statistics, and quantitative economics. It coordinates idea discovery,
-literature, research design, proofs, empirical evidence, simulation, writing,
-independent review, revision, and reproducible delivery while keeping every
-scientific claim bounded by the evidence that actually exists.
+Research Paper Workflow coordinates idea discovery, literature, research
+design, proofs, empirical evidence, simulation, writing, independent review,
+revision, and reproducible delivery while keeping every scientific claim
+bounded by the evidence that actually exists. Its orchestration and state model
+can support quantitative research across fields; its deepest documented routes,
+interfaces, and examples currently target econometrics, statistics, and
+quantitative economics.
 
 > **Status: v0.1.0 Research Preview.** The bundled controllers have local
 > regression coverage, but this release is not a guarantee of novelty,
@@ -86,6 +88,16 @@ Research agents often fail between specialist tasks: an idea loses its nearest
 neighbor evidence, a proof gap does not propagate to the manuscript, a pilot is
 reported as a production result, or a long simulation is polled repeatedly while
 result-dependent prose keeps moving. This workflow makes those handoffs explicit.
+
+### Scope and specialization
+
+The workflow core is deliberately domain-extensible: projects can reuse its
+evidence gates, resumable state, offline-job handling, and non-regression review
+without being economics papers. Econometrics is the current reference domain,
+not an exclusivity boundary. The included proof-lineage interface and the
+first-party companion routes are designed most specifically for econometric
+theory, statistical methods, and quantitative economics; other fields need
+their own specialist providers for domain-level validation.
 
 Core mechanisms include:
 

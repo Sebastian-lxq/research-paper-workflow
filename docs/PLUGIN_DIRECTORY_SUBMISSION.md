@@ -22,15 +22,17 @@ review cases; it is not evidence that OpenAI has reviewed or approved the plugin
 
 ### Short description
 
-Coordinate evidence-grounded quantitative research from idea discovery through
-reproducible delivery.
+A general evidence-grounded research workflow with first-class support for
+econometrics and quantitative economics.
 
 ### Long description
 
-Research Paper Workflow coordinates multi-stage econometrics, statistics, and
-quantitative-economics projects. It inspects existing artifacts, routes work to
-available specialist capabilities, preserves evidence and dependency gates,
-records resumable handoffs, waits safely for offline jobs, and prevents
+Research Paper Workflow coordinates multi-stage quantitative research from idea
+discovery through reproducible delivery. Its general orchestration layer
+inspects existing artifacts, preserves evidence and dependency gates, records
+resumable handoffs, and waits safely for offline jobs. Its deepest current
+specialization is econometrics, statistics, and quantitative economics, with
+dedicated companion routes and a public proof-lineage interface. It prevents
 literature, proof, empirical, simulation, or manuscript claims from advancing
 beyond their actual evidence.
 
