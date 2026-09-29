@@ -7,9 +7,9 @@
 - [x] English and Chinese usage documentation.
 - [x] MIT license, citation metadata, support, conduct, contribution, privacy,
       terms, and security policies.
-- [x] Software citation uses the collective contributor name; personal email and
-      ORCID are intentionally omitted because they are optional and no companion
-      paper is required.
+- [x] Software citation uses the maintainer's public GitHub identity; personal
+      email and ORCID are intentionally omitted because they are optional and no
+      companion paper is required.
 - [x] Human-readable and machine-readable third-party provenance.
 - [x] Machine-readable controller and state-schema inventories with release-time
       completeness checks and an explicit preview migration policy.
