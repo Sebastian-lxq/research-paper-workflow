@@ -6,9 +6,10 @@ version: 0.1.0
 date-released: 2026-09-29
 license: MIT
 authors:
-  - name: "Sebastian-lxq"
-repository-code: "https://github.com/Sebastian-lxq/research-paper-workflow"
-url: "https://github.com/Sebastian-lxq/research-paper-workflow"
+  - name: "XuQing"
+    email: "xuqinglin03@gmail.com"
+repository-code: "https://github.com/XuQingAcademic/research-paper-workflow"
+url: "https://github.com/XuQingAcademic/research-paper-workflow"
 abstract: >-
   An evidence-grounded orchestration plugin for quantitative research papers,
   covering idea discovery, literature, design, theory, empirical evidence,

@@ -5,6 +5,12 @@ All notable changes to this project are documented here. The project follows
 
 ## [Unreleased]
 
+- Replace the former GitHub username in install paths, manifests, citation
+  metadata, license notices, and verification links.
+- Add a two-command installation path, bilingual 60-second product tour, and
+  reproducible quick-start walkthrough.
+- Add a source-controlled public Plugins Directory submission packet with
+  listing copy, starter prompts, five positive cases, and three negative cases.
 - Add public release automation and clean-host validation.
 - Add portable companion-skill installation once their public repositories are available.
 - Add externally judged and second-host validation evidence.

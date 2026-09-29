@@ -1,5 +1,9 @@
 # Research Paper Workflow
 
+[![CI](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/XuQingAcademic/research-paper-workflow?display_name=tag)](https://github.com/XuQingAcademic/research-paper-workflow/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-3da9fc.svg)](LICENSE)
+
 [English](README.md) · [更新记录](CHANGELOG.md) ·
 [安全策略](SECURITY.md) · [隐私说明](PRIVACY.md) ·
 [兼容性矩阵](docs/COMPATIBILITY.md) · [第三方来源](THIRD_PARTY.md)
@@ -8,13 +12,71 @@
 命令行自动化还应遵循[退出码约定](docs/EXIT_CODES.md)：退出码 `1` 通常表示记录有效但
 尚未满足当前门槛，而不是输入损坏。
 
-Research Paper Workflow 是一个面向计量经济学、统计方法和定量经济研究的
-循证 Agent Plugin。它负责连接 idea、文献、研究设计、理论证明、实证、模拟、
-论文写作、独立复核、修订和可复现交付，并要求论文主张始终受实际证据约束。
+把一个研究方向转化为可审计的定量论文工作流，同时保留文献证据、证明缺口、
+模拟状态和修订历史。
+
+Research Paper Workflow 是一个面向计量经济学、统计方法和定量经济研究的循证
+Agent Plugin。它负责连接 idea、文献、研究设计、理论证明、实证、模拟、论文写作、
+独立复核、修订和可复现交付，并要求论文主张始终受实际证据约束。
 
 > **当前状态：v0.1.0 Research Preview。** 控制器已具备本地回归测试，但本项目
 > 不保证 idea 一定原创、文献检索穷尽、定理正确、识别成立、论文发表或所有维度
 > 单调改善。详细边界见[能力与声明范围](docs/CLAIMS.md)。
+
+## 安装并开始使用
+
+添加 GitHub marketplace 并安装插件：
+
+```bash
+codex plugin marketplace add XuQingAcademic/research-paper-workflow
+codex plugin add research-paper-workflow@research-paper-workflows
+```
+
+新建一个 Codex 会话，在定量研究项目目录中发送：
+
+```text
+请使用 $research-paper-workflow 检查当前项目，从已有材料续接，识别下一项未满足的
+证据要求，并继续所有不受当前阻塞影响的工作。
+```
+
+可选验证：
+
+```bash
+codex plugin list
+```
+
+输出中应包含已安装并启用的
+`research-paper-workflow@research-paper-workflows`。
+
+## 60 秒演示：输入 → 过程 → 产物
+
+```mermaid
+flowchart LR
+    A["输入<br/>研究方向<br/>+ 已有材料"]
+    B["检查<br/>项目状态和<br/>证据缺口"]
+    C["协调<br/>idea · 文献 · 设计<br/>证明 · 数据 · 模拟"]
+    D["门控<br/>阻止无证据主张<br/>继续安全分支"]
+    E["交付<br/>下一步 · 交接记录<br/>可恢复状态 · 发布状态"]
+    A --> B --> C --> D --> E
+```
+
+| 时间 | 用户提供 | 工作流执行 | 可检查产物 |
+| --- | --- | --- | --- |
+| 0–15 秒 | 问题、项目简报或已有论文 | 暂定论文类型并读取已有材料 | 第一项尚未满足的证据要求 |
+| 15–40 秒 | 如已有，可提供文献、证明、代码和结果 | 只路由至实际安装的专门能力，同时保留缺失依赖 | 候选路线、阻塞和有边界的下一步 |
+| 40–60 秒 | 安全的准备工作无需继续输入 | 写入可恢复状态，阻止依赖结果的主张提前推进 | `.paper/workflow/plan.json`、阶段状态和明确的待满足门槛 |
+
+可以直接使用隐私安全的合成示例
+[`examples/minimal-paper`](examples/minimal-paper/README.md)，或运行确定性的控制器
+smoke path：
+
+```bash
+python3 scripts/smoke_example.py
+```
+
+它会初始化 methods-paper 工作流，把 production simulation 标记为 deferred，识别
+`framing` 为下一项可运行阶段，并且不生成任何科学结果主张。完整说明见
+[快速开始演示](docs/QUICKSTART.zh-CN.md)。
 
 ## 主要能力
 
@@ -27,12 +89,13 @@ Research Paper Workflow 是一个面向计量经济学、统计方法和定量�
 - 离线模拟运行时保存真实句柄并等待，只继续不依赖结果的工作；
 - 区分结构检查通过、科学证据通过和投稿候选资格。
 
-## 本地安装
+## 备选的本地开发安装
 
-当前公开预览版需要 Python 3.9+，控制脚本支持 macOS 和 Linux。
+当前公开预览版需要 Python 3.9+，控制脚本支持 macOS 和 Linux。若要直接从本地
+checkout 开发和调试，可以执行：
 
 ```bash
-git clone https://github.com/Sebastian-lxq/research-paper-workflow.git
+git clone https://github.com/XuQingAcademic/research-paper-workflow.git
 cd research-paper-workflow
 codex plugin marketplace add "$PWD"
 codex plugin add research-paper-workflow@research-paper-workflows
@@ -42,7 +105,7 @@ codex plugin add research-paper-workflow@research-paper-workflows
 `plugin.json` 为可移植入口，并从 `skills/` 发现工作流；本仓库同时保留 Codex
 兼容 manifest。
 
-## 开始使用
+## 其他使用路径
 
 在论文项目目录中发送：
 
@@ -117,8 +180,8 @@ python3 scripts/verify_release.py dist/research-paper-workflow-0.1.0.zip
 ## 参与和许可
 
 贡献规则见 [CONTRIBUTING.md](CONTRIBUTING.md)，安全问题见 [SECURITY.md](SECURITY.md)，
-软件引用信息见 [CITATION.cff](CITATION.cff)；本项目不要求配套论文，个人邮箱和
-ORCID 也是可选项，因此预览版暂不填写。参考资料、运行时集成以及使用或借鉴的
-GitHub 项目统一记录在 [THIRD_PARTY.md](THIRD_PARTY.md)。项目采用
+软件引用信息见 [CITATION.cff](CITATION.cff)；本项目不要求配套论文，维护者的公开
+联系邮箱已列入其中，ORCID 仍为可选项且暂未填写。参考资料、运行时集成以及使用或
+借鉴的 GitHub 项目统一记录在 [THIRD_PARTY.md](THIRD_PARTY.md)。项目采用
 [MIT License](LICENSE)。隐私与使用边界见 [PRIVACY.md](PRIVACY.md) 和
 [TERMS.md](TERMS.md)。

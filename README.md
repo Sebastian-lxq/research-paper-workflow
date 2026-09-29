@@ -1,5 +1,9 @@
 # Research Paper Workflow
 
+[![CI](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/XuQingAcademic/research-paper-workflow?display_name=tag)](https://github.com/XuQingAcademic/research-paper-workflow/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-3da9fc.svg)](LICENSE)
+
 [简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) ·
 [Security](SECURITY.md) · [Privacy](PRIVACY.md) ·
 [Compatibility](docs/COMPATIBILITY.md) ·
@@ -7,16 +11,74 @@
 [CLI exit codes](docs/EXIT_CODES.md) ·
 [Third-party provenance](THIRD_PARTY.md)
 
-Research Paper Workflow is an evidence-grounded Agent Plugin for coordinating
-quantitative research papers. It connects idea discovery, literature, research
-design, proofs, empirical evidence, simulation, writing, independent review,
-revision, and reproducible delivery while keeping scientific claims bounded by
-the evidence that actually exists.
+Turn a research direction into an auditable quantitative-paper workflow without
+losing literature evidence, proof gaps, simulation state, or revision history.
+
+Research Paper Workflow is an evidence-grounded Agent Plugin for econometrics,
+statistics, and quantitative economics. It coordinates idea discovery,
+literature, research design, proofs, empirical evidence, simulation, writing,
+independent review, revision, and reproducible delivery while keeping every
+scientific claim bounded by the evidence that actually exists.
 
 > **Status: v0.1.0 Research Preview.** The bundled controllers have local
 > regression coverage, but this release is not a guarantee of novelty,
 > mathematical correctness, identification, publication, or exhaustive
 > literature coverage. See [claim boundaries](docs/CLAIMS.md).
+
+## Install and start
+
+Add the GitHub marketplace and install the plugin:
+
+```bash
+codex plugin marketplace add XuQingAcademic/research-paper-workflow
+codex plugin add research-paper-workflow@research-paper-workflows
+```
+
+Start a new Codex thread in a quantitative-research project and paste:
+
+```text
+Use $research-paper-workflow to inspect the current project, identify the next
+unmet evidence requirement, and continue every branch that is safe to advance.
+```
+
+Optional verification:
+
+```bash
+codex plugin list
+```
+
+The output should include
+`research-paper-workflow@research-paper-workflows` as installed and enabled.
+
+## 60-second tour: input → process → deliverables
+
+```mermaid
+flowchart LR
+    A["Input<br/>research direction<br/>+ existing artifacts"]
+    B["Inspect<br/>project state and<br/>evidence gaps"]
+    C["Coordinate<br/>ideas · literature · design<br/>proofs · data · simulation"]
+    D["Gate<br/>block unsupported claims<br/>continue safe branches"]
+    E["Deliver<br/>next action · handoffs<br/>resumable state · release status"]
+    A --> B --> C --> D --> E
+```
+
+| Moment | What the user supplies | What the workflow does | What becomes inspectable |
+| --- | --- | --- | --- |
+| 0–15 s | A question, project brief, or existing paper | Classifies the project provisionally and reads current artifacts | The first unresolved evidence requirement |
+| 15–40 s | Existing literature, proofs, code, and results if available | Routes only to installed specialist capabilities and preserves missing dependencies | Candidate routes, blockers, and bounded next actions |
+| 40–60 s | No additional input is required for safe setup work | Records resumable state and prevents result-dependent claims from moving early | `.paper/workflow/plan.json`, stage status, and explicit pending gates |
+
+Try the synthetic, privacy-safe example in
+[`examples/minimal-paper`](examples/minimal-paper/README.md), or run its
+deterministic controller smoke path:
+
+```bash
+python3 scripts/smoke_example.py
+```
+
+The smoke path initializes a methods-paper workflow, records simulation as
+deferred, identifies `framing` as the next runnable stage, and makes no
+scientific-result claim. See the full [quick-start walkthrough](docs/QUICKSTART.md).
 
 ## Why this project exists
 
@@ -57,7 +119,7 @@ The layout follows the current OpenAI Agent Plugins structure: a plugin has a
 root `plugin.json` and discovers skills under `skills/`; the compatibility
 manifest remains for Codex clients that still use it.
 
-## Local installation
+## Alternative local installation
 
 Requirements:
 
@@ -65,10 +127,11 @@ Requirements:
 - Python 3.9 or newer;
 - macOS or Linux for the v0.1.0 controller scripts.
 
-Clone the repository, add it as a local marketplace, then install the plugin:
+For local development, clone the repository, add that checkout as a marketplace,
+then install the plugin:
 
 ```bash
-git clone https://github.com/Sebastian-lxq/research-paper-workflow.git
+git clone https://github.com/XuQingAcademic/research-paper-workflow.git
 cd research-paper-workflow
 codex plugin marketplace add "$PWD"
 codex plugin add research-paper-workflow@research-paper-workflows
@@ -80,7 +143,7 @@ repo marketplace is defined in `.agents/plugins/marketplace.json`.
 For development without installation, point Codex at
 `plugins/research-paper-workflow` as a plugin capability directory.
 
-## Quick start
+## Additional usage paths
 
 Open a quantitative-research project and ask:
 
@@ -186,8 +249,8 @@ scope. Please report vulnerabilities privately as described in
 ## Citation and license
 
 This is a software project and does not require a companion paper. Software
-citation metadata is in [CITATION.cff](CITATION.cff); personal email and ORCID
-are optional and are intentionally omitted from the preview release. References,
+citation metadata is in [CITATION.cff](CITATION.cff); the maintainer's public
+contact email is included, while ORCID remains optional and omitted. References,
 runtime integrations, and GitHub projects used or consulted are attributed in
 [THIRD_PARTY.md](THIRD_PARTY.md). The project is released under the
 [MIT License](LICENSE). See [Privacy](PRIVACY.md) and [Terms](TERMS.md).

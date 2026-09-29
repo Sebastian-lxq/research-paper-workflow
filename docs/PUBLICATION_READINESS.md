@@ -7,9 +7,12 @@
 - [x] English and Chinese usage documentation.
 - [x] MIT license, citation metadata, support, conduct, contribution, privacy,
       terms, and security policies.
-- [x] Software citation uses the maintainer's public GitHub identity; personal
-      email and ORCID are intentionally omitted because they are optional and no
-      companion paper is required.
+- [x] Software citation uses the maintainer's public GitHub identity and public
+      contact email; ORCID remains optional and omitted, and no companion paper
+      is required.
+- [x] Two-command Git-backed installation and bilingual 60-second walkthrough.
+- [x] Public Plugins Directory listing copy, starter prompts, and five positive
+      plus three negative review cases prepared in a source-controlled packet.
 - [x] Human-readable and machine-readable third-party provenance.
 - [x] Machine-readable controller and state-schema inventories with release-time
       completeness checks and an explicit preview migration policy.
@@ -41,8 +44,9 @@
 - [x] Verify the first tag artifact's GitHub provenance attestation.
 - [x] Install from the Git-backed marketplace with no prior copy of this
       marketplace or plugin in the Codex profile.
-- [ ] Submit to the universal Plugins Directory only when the maintainer wants
-      public directory publication.
+- [ ] Complete OpenAI developer verification, create the external submission,
+      submit it for review, and publish after approval. Repository-side materials
+      are prepared in [the submission packet](PLUGIN_DIRECTORY_SUBMISSION.md).
 
 ## Scientific maturity gates beyond an alpha release
 

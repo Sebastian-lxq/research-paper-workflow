@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "description": "Evidence-grounded orchestration for quantitative research papers, from idea discovery through reproducible delivery.",
   "author": {
-    "name": "Sebastian-lxq",
-    "url": "https://github.com/Sebastian-lxq"
+    "name": "XuQing",
+    "email": "xuqinglin03@gmail.com",
+    "url": "https://github.com/XuQingAcademic"
   },
-  "homepage": "https://github.com/Sebastian-lxq/research-paper-workflow",
-  "repository": "https://github.com/Sebastian-lxq/research-paper-workflow",
+  "homepage": "https://github.com/XuQingAcademic/research-paper-workflow",
+  "repository": "https://github.com/XuQingAcademic/research-paper-workflow",
   "license": "MIT",
   "keywords": [
     "research",

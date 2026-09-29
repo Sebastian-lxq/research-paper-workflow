@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Evidence-grounded orchestration for quantitative research papers, from idea discovery through reproducible delivery.",
   "author": {
-    "name": "Sebastian-lxq"
+    "name": "XuQing",
+    "email": "xuqinglin03@gmail.com",
+    "url": "https://github.com/XuQingAcademic"
   },
   "license": "MIT",
   "keywords": [
@@ -18,12 +20,11 @@
     "displayName": "Research Paper Workflow",
     "shortDescription": "Evidence-grounded quantitative research orchestration.",
     "longDescription": "Coordinate ideas, literature, research design, theory, empirical evidence, simulation, writing, independent review, revision, and reproducible delivery without overstating incomplete evidence.",
-    "developerName": "Sebastian-lxq",
+    "developerName": "XuQing",
     "category": "Research",
-    "websiteURL": "https://github.com/Sebastian-lxq/research-paper-workflow",
-    "privacyPolicyURL": "https://github.com/Sebastian-lxq/research-paper-workflow/blob/main/PRIVACY.md",
-    "termsOfServiceURL": "https://github.com/Sebastian-lxq/research-paper-workflow/blob/main/TERMS.md",
-    "supportURL": "https://github.com/Sebastian-lxq/research-paper-workflow/issues",
+    "websiteURL": "https://github.com/XuQingAcademic/research-paper-workflow",
+    "privacyPolicyURL": "https://github.com/XuQingAcademic/research-paper-workflow/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/XuQingAcademic/research-paper-workflow/blob/main/TERMS.md",
     "capabilities": [
       "Research planning",
       "Evidence handoffs",
