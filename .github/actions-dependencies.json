@@ -36,6 +36,24 @@
       "repository": "https://github.com/actions/attest",
       "license": "MIT",
       "scope": "ci-only"
+    },
+    {
+      "uses": "actions/configure-pages@v5",
+      "repository": "https://github.com/actions/configure-pages",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "actions/upload-pages-artifact@v4",
+      "repository": "https://github.com/actions/upload-pages-artifact",
+      "license": "MIT",
+      "scope": "ci-only"
+    },
+    {
+      "uses": "actions/deploy-pages@v5",
+      "repository": "https://github.com/actions/deploy-pages",
+      "license": "MIT",
+      "scope": "ci-only"
     }
   ]
 }

@@ -21,7 +21,7 @@ Packaging fails if its automatic archive self-verification fails. Verify an
 existing or downloaded candidate without rebuilding it using:
 
 ```bash
-python3 scripts/verify_release.py dist/research-paper-workflow-0.1.0.zip
+python3 scripts/verify_release.py dist/research-paper-workflow-0.1.1.zip
 ```
 
 The tag-triggered packaging workflow repeats the checks and uploads the ZIP plus
@@ -32,7 +32,7 @@ Creating a GitHub Release remains an explicit maintainer action.
 Verify both files from the directory containing them:
 
 ```bash
-shasum -a 256 -c research-paper-workflow-0.1.0.zip.sha256
+shasum -a 256 -c research-paper-workflow-0.1.1.zip.sha256
 ```
 
 After extraction, verify every packaged file from the plugin root:
@@ -81,7 +81,7 @@ Before tagging a release:
 
 ## GitHub release
 
-Create a signed or annotated tag such as `v0.1.0`, generate release notes from
+Create a signed or annotated tag such as `v0.1.1`, generate release notes from
 the changelog, and mark unstable builds as prereleases. Require the CI status
 check on the default branch before release.
 

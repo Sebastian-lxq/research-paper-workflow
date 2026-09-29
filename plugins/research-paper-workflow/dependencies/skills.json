@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "workflow_version": "0.1.0",
+  "workflow_version": "0.1.1",
   "resolution_policy": {
     "discover_at_runtime": true,
     "never_assume_installed": true,

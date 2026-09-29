@@ -1,0 +1,77 @@
+name: Pilot feedback
+description: Report a first-run, routing, state, or evidence-boundary observation from the research preview pilot.
+title: "[Pilot]: "
+labels:
+  - pilot-feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing the Research Preview. Share only public, synthetic, or otherwise redistributable material.
+  - type: dropdown
+    id: route
+    attributes:
+      label: Installation route
+      options:
+        - Codex plugin marketplace
+        - skills.sh
+        - Local checkout
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version, and relevant agent version.
+      placeholder: macOS 15, Python 3.12, Codex …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feedback area
+      options:
+        - Installation
+        - Skill triggering or routing
+        - Workflow state or resume behavior
+        - Evidence or scientific boundary
+        - Documentation
+        - Useful outcome
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Public or synthetic prompt
+      description: Remove confidential research content, credentials, and private data.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal safe reproduction material
+      description: Link or attach only material you are authorized to disclose.
+    validations:
+      required: false
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Public disclosure confirmation
+      options:
+        - label: I confirm that this issue contains no confidential data, unpublished material I cannot share, credentials, or private correspondence.
+          required: true

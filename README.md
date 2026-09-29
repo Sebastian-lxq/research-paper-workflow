@@ -3,13 +3,17 @@
 [![CI](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml)
 [![Tag](https://img.shields.io/github/v/tag/XuQingAcademic/research-paper-workflow?label=tag)](https://github.com/XuQingAcademic/research-paper-workflow/tags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3da9fc.svg)](LICENSE)
+[![skills.sh](https://skills.sh/b/XuQingAcademic/research-paper-workflow)](https://skills.sh/XuQingAcademic/research-paper-workflow)
 
 [简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) ·
 [Security](SECURITY.md) · [Privacy](PRIVACY.md) ·
 [Compatibility](docs/COMPATIBILITY.md) ·
+[Pilot program](docs/PILOT_PROGRAM.md) ·
+[Synthetic case study](docs/SYNTHETIC_CASE_STUDY.md) ·
 [State schemas](docs/STATE_SCHEMAS.md) ·
 [CLI exit codes](docs/EXIT_CODES.md) ·
-[Third-party provenance](THIRD_PARTY.md)
+[Third-party provenance](THIRD_PARTY.md) ·
+[Project site](https://xuqingacademic.github.io/research-paper-workflow/)
 
 A general, evidence-grounded research-paper workflow with first-class support
 for econometrics and quantitative economics.
@@ -22,10 +26,24 @@ can support quantitative research across fields; its deepest documented routes,
 interfaces, and examples currently target econometrics, statistics, and
 quantitative economics.
 
-> **Status: v0.1.0 Research Preview.** The bundled controllers have local
+> **Status: v0.1.1 Research Preview.** The bundled controllers have local
 > regression coverage, but this release is not a guarantee of novelty,
 > mathematical correctness, identification, publication, or exhaustive
 > literature coverage. See [claim boundaries](docs/CLAIMS.md).
+
+## Who it is for—and what five minutes gives you
+
+| You are working on… | The workflow helps you… |
+| --- | --- |
+| Econometric theory or statistical methods | Keep idea, literature, proof, simulation, and writing dependencies explicit |
+| A quantitative paper with incomplete evidence | Identify the first unmet requirement and continue only independent safe work |
+| A long-running or multi-session research project | Persist compact state, job handles, blockers, and resume conditions |
+| Research-agent infrastructure | Reuse a portable orchestration layer while supplying your own domain validators |
+
+Within the first five minutes, a conforming run should produce a provisional
+project classification, visible evidence gaps, the next bounded action, and—if
+authorized—a resumable `.paper/workflow/` state. It should **not** manufacture a
+literature finding, theorem, numerical result, or novelty claim.
 
 ## Install and start
 
@@ -52,7 +70,19 @@ codex plugin list
 The output should include
 `research-paper-workflow@research-paper-workflows` as installed and enabled.
 
+For agents that use the open `SKILL.md` ecosystem, a skill-only installation is
+also available through [skills.sh](https://skills.sh/):
+
+```bash
+npx skills add XuQingAcademic/research-paper-workflow --skill research-paper-workflow
+```
+
+This route installs the workflow skill and its referenced files; the Codex
+plugin command above additionally installs the repository's plugin metadata.
+
 ## 60-second tour: input → process → deliverables
+
+![A 60-second synthetic demonstration of Research Paper Workflow moving from a broad research direction to evidence gaps, gated branches, resumable state, and a bounded next action.](docs/assets/workflow-demo.gif)
 
 ```mermaid
 flowchart LR
@@ -81,6 +111,8 @@ python3 scripts/smoke_example.py
 The smoke path initializes a methods-paper workflow, records simulation as
 deferred, identifies `framing` as the next runnable stage, and makes no
 scientific-result claim. See the full [quick-start walkthrough](docs/QUICKSTART.md).
+For the complete input-to-handoff narrative, read the
+[synthetic case study](docs/SYNTHETIC_CASE_STUDY.md).
 
 ## Why this project exists
 
@@ -137,7 +169,7 @@ Requirements:
 
 - Codex or ChatGPT desktop with local plugin support;
 - Python 3.9 or newer;
-- macOS or Linux for the v0.1.0 controller scripts.
+- macOS or Linux for the v0.1.x controller scripts.
 
 For local development, clone the repository, add that checkout as a marketplace,
 then install the plugin:
@@ -169,6 +201,10 @@ For a synthetic project with no private data, start from
 The runnable [`offline-wait example`](examples/offline-wait/README.md) shows why
 result-dependent work pauses on a registered handle while unrelated work may
 continue.
+
+Early users can follow the public [20-minute pilot](docs/PILOT_PROGRAM.md) and
+report the first installation, routing, state, or evidence-boundary problem
+through the dedicated issue form or GitHub Discussions.
 
 The workflow discovers companion skills at runtime. Missing providers do not
 silently become successful stages: the workflow continues only unaffected work,
@@ -211,11 +247,11 @@ sidecar `.sha256` checksum for release verification. The archive itself contains
 The build self-verifies. A downloaded candidate can be checked portably with:
 
 ```bash
-python3 scripts/verify_release.py dist/research-paper-workflow-0.1.0.zip
+python3 scripts/verify_release.py dist/research-paper-workflow-0.1.1.zip
 ```
 
 GitHub Actions runs the same check on Linux and macOS across supported Python
-versions. Windows is not claimed in v0.1.0 because several controllers use
+versions. Windows is not claimed in v0.1.1 because several controllers use
 POSIX file locks; contributions that add an equivalent tested lock backend are
 welcome.
 
@@ -246,7 +282,7 @@ revisions, licenses, design influences, and whether code is bundled in
 - design influence: cite the source and the adopted mechanism;
 - copied or modified implementation: also preserve all required license notices.
 
-No third-party skill implementation is bundled in v0.1.0.
+No third-party skill implementation is bundled in v0.1.1.
 CI-only GitHub Actions are also attributed separately in
 `.github/actions-dependencies.json`; they are development infrastructure, not
 runtime research capabilities.

@@ -23,7 +23,7 @@ inventory is
 ## Relationship types
 
 - **First-party companion:** maintained alongside this workflow but distributed
-  separately in v0.1.0.
+  separately in v0.1.1.
 - **Third-party integration:** an independently maintained skill that may be
   invoked when installed; its code is not bundled.
 - **Design influence:** a public project whose mechanism informed a local,

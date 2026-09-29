@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this workflow in research, please cite this software release."
 title: "Research Paper Workflow"
 type: software
-version: 0.1.0
+version: 0.1.1
 date-released: 2026-09-29
 license: MIT
 authors:

@@ -11,9 +11,10 @@ Last local and hosted-CI verification: 2026-09-29.
 | macOS Python | 3.10, 3.13 | [GitHub Actions CI run 36551279086](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36551279086) | Passed |
 | GitHub CodeQL | Python source scan | [CodeQL run 36551279138](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36551279138) | Passed |
 | GitHub release artifact | `v0.1.0` | [Packaging run 36552893525](https://github.com/XuQingAcademic/research-paper-workflow/actions/runs/36552893525); external SHA-256, internal manifest, and GitHub provenance verified for digest `74164c80c29aabd4c9fab4bb5490fa3e8a05d2422e230f2ba663fff7b5232eb9` | Passed |
+| skills.sh CLI | 1.7.0 | Discovered the nested skill without `--full-depth`; installed the public GitHub source into an isolated project with scripts and references present | Passed |
 | ChatGPT desktop local marketplace | Current supported client | Repo marketplace prepared | Pending installation test |
 | Universal Plugins Directory | Public submission | Portable ZIP prepared | Not submitted |
-| Windows | Any | POSIX file locks are used by state controllers | Unsupported in v0.1.0 |
+| Windows | Any | POSIX file locks are used by state controllers | Unsupported in v0.1.1 |
 
 “Passed” is limited to the listed test suite. It does not establish scientific
 validity, a clean second-host install, or compatibility with future client

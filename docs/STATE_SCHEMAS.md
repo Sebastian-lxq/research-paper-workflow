@@ -46,7 +46,7 @@ The v0.1.x series follows `preview-no-silent-mutation`:
 
 ## Current coexistence and migration rules
 
-There is no generic in-place migrator in v0.1.0. That is deliberate: research
+There is no generic in-place migrator in v0.1.1. That is deliberate: research
 records may contain judgments that cannot be safely inferred by a mechanical
 conversion.
 

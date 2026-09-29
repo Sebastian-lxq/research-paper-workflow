@@ -107,7 +107,7 @@ class ActionDependencyTests(unittest.TestCase):
         root = Path(temporary) / "candidate"
         workflows = root / ".github" / "workflows"
         workflows.mkdir(parents=True)
-        for name in ("ci.yml", "package.yml", "codeql.yml"):
+        for name in ("ci.yml", "package.yml", "codeql.yml", "pages.yml"):
             shutil.copy2(ROOT / ".github" / "workflows" / name, workflows / name)
         shutil.copy2(
             ROOT / ".github" / "actions-dependencies.json",

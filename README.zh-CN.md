@@ -3,10 +3,14 @@
 [![CI](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/XuQingAcademic/research-paper-workflow/actions/workflows/ci.yml)
 [![Tag](https://img.shields.io/github/v/tag/XuQingAcademic/research-paper-workflow?label=tag)](https://github.com/XuQingAcademic/research-paper-workflow/tags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3da9fc.svg)](LICENSE)
+[![skills.sh](https://skills.sh/b/XuQingAcademic/research-paper-workflow)](https://skills.sh/XuQingAcademic/research-paper-workflow)
 
 [English](README.md) · [更新记录](CHANGELOG.md) ·
 [安全策略](SECURITY.md) · [隐私说明](PRIVACY.md) ·
-[兼容性矩阵](docs/COMPATIBILITY.md) · [第三方来源](THIRD_PARTY.md)
+[兼容性矩阵](docs/COMPATIBILITY.md) · [试用计划](docs/PILOT_PROGRAM.md) ·
+[合成案例](docs/SYNTHETIC_CASE_STUDY.md) ·
+[第三方来源](THIRD_PARTY.md) ·
+[项目主页](https://xuqingacademic.github.io/research-paper-workflow/)
 
 状态格式及迁移规则见[状态格式说明](docs/STATE_SCHEMAS.md)。
 命令行自动化还应遵循[退出码约定](docs/EXIT_CODES.md)：退出码 `1` 通常表示记录有效但
@@ -19,9 +23,22 @@ Research Paper Workflow 负责连接 idea、文献、研究设计、理论证明
 它的编排与状态框架可用于不同领域的定量研究；目前最深入的专门路由、接口和示例
 集中在计量经济学、统计方法与数量经济学。
 
-> **当前状态：v0.1.0 Research Preview。** 控制器已具备本地回归测试，但本项目
+> **当前状态：v0.1.1 Research Preview。** 控制器已具备本地回归测试，但本项目
 > 不保证 idea 一定原创、文献检索穷尽、定理正确、识别成立、论文发表或所有维度
 > 单调改善。详细边界见[能力与声明范围](docs/CLAIMS.md)。
+
+## 适合谁，以及五分钟内能得到什么
+
+| 你的工作 | 工作流提供 |
+| --- | --- |
+| 计量理论或统计方法研究 | 显式管理 idea、文献、证明、模拟与写作依赖 |
+| 证据尚未齐全的定量论文 | 找到第一项未满足要求，只推进不受阻塞影响的工作 |
+| 长时间或跨会话研究项目 | 保存紧凑状态、任务句柄、阻塞和恢复条件 |
+| 科研 Agent 基础设施 | 复用可移植编排层，同时接入自己的领域验证能力 |
+
+一次符合约束的初始运行应在五分钟内给出暂定项目类型、可见证据缺口、有边界的下一步，
+并在获得授权时生成可恢复的 `.paper/workflow/` 状态；它不会凭空生成文献结论、定理、
+数值结果或原创性声明。
 
 ## 安装并开始使用
 
@@ -48,7 +65,19 @@ codex plugin list
 输出中应包含已安装并启用的
 `research-paper-workflow@research-paper-workflows`。
 
+对于使用开放 `SKILL.md` 生态的 Agent，也可以通过
+[skills.sh](https://skills.sh/) 仅安装工作流 Skill：
+
+```bash
+npx skills add XuQingAcademic/research-paper-workflow --skill research-paper-workflow
+```
+
+该路径会安装工作流 Skill 及其引用文件；前面的 Codex plugin 命令还会安装仓库中的
+插件元数据。
+
 ## 60 秒演示：输入 → 过程 → 产物
+
+![Research Paper Workflow 的 60 秒合成演示：从宽泛研究方向到证据缺口、门控分支、可恢复状态和有边界的下一步。](docs/assets/workflow-demo.gif)
 
 ```mermaid
 flowchart LR
@@ -77,6 +106,7 @@ python3 scripts/smoke_example.py
 它会初始化 methods-paper 工作流，把 production simulation 标记为 deferred，识别
 `framing` 为下一项可运行阶段，并且不生成任何科学结果主张。完整说明见
 [快速开始演示](docs/QUICKSTART.zh-CN.md)。
+从输入、门控到交接产物的完整叙述见[合成案例](docs/SYNTHETIC_CASE_STUDY.md)。
 
 ## 定位与专业范围
 
@@ -126,6 +156,9 @@ codex plugin add research-paper-workflow@research-paper-workflows
 [`offline-wait` 示例](examples/offline-wait/README.md)还会实际验证：离线模拟等待期间，
 依赖结果的写作会被阻止，只有登记终态和结果文件后才解除等待屏障。
 
+首批用户可以按照公开的[20 分钟试用计划](docs/PILOT_PROGRAM.md)完成一次测试，并通过
+专用 Issue 表单或 GitHub Discussions 报告安装、路由、状态或证据边界问题。
+
 ## Companion skills 与第三方说明
 
 完整流程会调用若干 companion skills。公开版会在运行时重新发现它们；缺少某个
@@ -149,7 +182,7 @@ python3 plugins/research-paper-workflow/scripts/check_companions.py
 
 完整记录见 [THIRD_PARTY.md](THIRD_PARTY.md)，机器可读依赖见
 [`dependencies/skills.json`](plugins/research-paper-workflow/dependencies/skills.json)。
-v0.1.0 没有打包第三方 skill 的实现代码。
+v0.1.1 没有打包第三方 skill 的实现代码。
 CI 中执行的 GitHub Actions 另行记录在 `.github/actions-dependencies.json`，不会与
 运行时科研能力混为一谈。
 
@@ -175,7 +208,7 @@ python3 scripts/package_plugin.py
 可使用跨平台的标准库验包命令同时核对两层哈希、路径和 manifest 身份：
 
 ```bash
-python3 scripts/verify_release.py dist/research-paper-workflow-0.1.0.zip
+python3 scripts/verify_release.py dist/research-paper-workflow-0.1.1.zip
 ```
 
 ## 隐私边界

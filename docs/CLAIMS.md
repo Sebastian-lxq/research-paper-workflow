@@ -9,7 +9,7 @@ This project separates three questions that are often conflated:
 3. **Is the scientific conclusion true and general?** Only task-specific source,
    proof, data, simulation, and independent-review evidence can answer this.
 
-## Supported v0.1.0 claims
+## Supported v0.1.1 claims
 
 The public package may claim that it supplies:
 

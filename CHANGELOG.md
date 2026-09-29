@@ -5,15 +5,30 @@ All notable changes to this project are documented here. The project follows
 
 ## [Unreleased]
 
+- Add portable companion-skill installation once their public repositories are available.
+- Add externally judged and second-host validation evidence.
+
+## [0.1.1] - 2026-09-29
+
+### Added
+
+- A 60-second animated synthetic workflow demonstration and reproducible render script.
+- A standalone dark-theme project site with a GitHub Pages deployment workflow.
+- A tested skill-only installation path through the `skills.sh` CLI.
+- A public 20-minute pilot, dedicated feedback issue form, and bilingual launch kit.
+- A complete synthetic input-to-handoff case study and versioned release notes.
+- A source-controlled public Plugins Directory submission packet with listing
+  copy, starter prompts, five positive cases, and three negative cases.
+
+### Changed
+
 - Replace the former GitHub username in install paths, manifests, citation
   metadata, license notices, and verification links.
 - Add a two-command installation path, bilingual 60-second product tour, and
   reproducible quick-start walkthrough.
-- Add a source-controlled public Plugins Directory submission packet with
-  listing copy, starter prompts, five positive cases, and three negative cases.
 - Add public release automation and clean-host validation.
-- Add portable companion-skill installation once their public repositories are available.
-- Add externally judged and second-host validation evidence.
+- Clarify that the orchestration core is general while the deepest current
+  specialization is econometrics, statistics, and quantitative economics.
 
 ## [0.1.0] - 2026-09-29
 

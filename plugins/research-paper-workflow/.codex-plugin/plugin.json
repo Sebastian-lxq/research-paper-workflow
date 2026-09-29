@@ -1,6 +1,6 @@
 {
   "name": "research-paper-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Evidence-grounded orchestration for quantitative research papers, from idea discovery through reproducible delivery.",
   "author": {
     "name": "XuQing",

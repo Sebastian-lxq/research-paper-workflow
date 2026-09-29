@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A general evidence-grounded research workflow with first-class support for econometrics and quantitative economics."
+    />
+    <meta name="theme-color" content="#070b17" />
+    <meta property="og:title" content="Research Paper Workflow" />
+    <meta
+      property="og:description"
+      content="Move from a research direction to evidence-gated, resumable work without inventing results."
+    />
+    <meta
+      property="og:image"
+      content="https://xuqingacademic.github.io/research-paper-workflow/assets/workflow-demo-poster.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xuqingacademic.github.io/research-paper-workflow/" />
+    <title>Research Paper Workflow</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Research Paper Workflow home">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="Layered distribution curves">
+          <circle cx="32" cy="32" r="29" fill="#0a1730" stroke="#60a5fa" stroke-width="2.5" />
+          <path d="M13 41 C19 20 26 20 32 41" fill="none" stroke="#818cf8" stroke-width="3" />
+          <path d="M32 41 C38 18 45 18 51 41" fill="none" stroke="#2dd4bf" stroke-width="3" />
+          <circle cx="32" cy="41" r="3.5" fill="#e8eef9" />
+        </svg>
+        <span>Research Paper Workflow</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#demo">Demo</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#trust">Evidence</a>
+        <a href="https://github.com/XuQingAcademic/research-paper-workflow">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="kicker">GENERAL ORCHESTRATION · ECONOMETRICS FIRST</p>
+          <h1>Keep the paper moving.<br /><span>Keep every claim bounded.</span></h1>
+          <p class="lead">
+            An evidence-grounded workflow for quantitative research, with first-class support for
+            econometrics and quantitative economics—from idea discovery to reproducible delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install">Install from GitHub</a>
+            <a class="button secondary" href="#demo">Watch the 60-second demo</a>
+          </div>
+          <div class="proof-row" aria-label="Project assurances">
+            <span>MIT licensed</span>
+            <span>208 workflow tests</span>
+            <span>Linux + macOS CI</span>
+            <span>Research Preview</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Workflow summary">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="signal-card signal-main">
+            <span class="signal-label">NEXT SAFE ACTION</span>
+            <strong>Search nearest neighbors</strong>
+            <p>Then run the cheapest toy falsifier.</p>
+          </div>
+          <div class="signal-card signal-top">
+            <span class="dot green"></span>
+            Independent work continues
+          </div>
+          <div class="signal-card signal-bottom">
+            <span class="dot amber"></span>
+            Novelty claim remains pending
+          </div>
+        </div>
+      </section>
+
+      <section class="section narrow reveal" id="install">
+        <div class="section-heading">
+          <p class="kicker">INSTALL</p>
+          <h2>Two commands. One explicit starting prompt.</h2>
+        </div>
+        <div class="install-panel">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <p>Terminal</p>
+          </div>
+          <pre><code id="install-command">codex plugin marketplace add XuQingAcademic/research-paper-workflow
+codex plugin add research-paper-workflow@research-paper-workflows</code></pre>
+          <button class="copy-button" data-copy="install-command">Copy commands</button>
+        </div>
+        <div class="prompt-panel">
+          <div>
+            <span class="signal-label">FIRST PROMPT</span>
+            <p id="first-prompt">Use $research-paper-workflow to inspect the current project, identify the next unmet evidence requirement, and continue every branch that is safe to advance.</p>
+          </div>
+          <button class="copy-button quiet" data-copy="first-prompt">Copy prompt</button>
+        </div>
+      </section>
+
+      <section class="section reveal" id="demo">
+        <div class="section-heading split">
+          <div>
+            <p class="kicker">60-SECOND SYNTHETIC DEMO</p>
+            <h2>From broad direction to bounded next action.</h2>
+          </div>
+          <p>
+            The example uses no private data and makes no literature, theorem, or numerical claim.
+            Every visible output corresponds to a documented workflow boundary.
+          </p>
+        </div>
+        <div class="demo-frame">
+          <img
+            src="assets/workflow-demo.gif"
+            alt="Animated demonstration of Research Paper Workflow inspecting a synthetic methods project, preserving evidence gaps, gating unsupported claims, and delivering a bounded next action."
+            width="1280"
+            height="720"
+          />
+        </div>
+      </section>
+
+      <section class="section reveal" id="workflow">
+        <div class="section-heading">
+          <p class="kicker">WORKFLOW</p>
+          <h2>One research spine. Explicit gates between every stage.</h2>
+        </div>
+        <div class="pipeline" role="list">
+          <article role="listitem"><span>01</span><h3>Ideas</h3><p>Compare mechanisms and cheap falsifiers, not title variants.</p></article>
+          <article role="listitem"><span>02</span><h3>Literature</h3><p>Bind novelty language to sources that were actually retrieved and read.</p></article>
+          <article role="listitem"><span>03</span><h3>Design</h3><p>Freeze estimand, identification, and the evidence each claim requires.</p></article>
+          <article role="listitem"><span>04</span><h3>Proof + empirical</h3><p>Route specialist work while preserving proof and result lineage.</p></article>
+          <article role="listitem"><span>05</span><h3>Simulation</h3><p>Persist real job handles and continue independent work while offline jobs run.</p></article>
+          <article role="listitem"><span>06</span><h3>Review + release</h3><p>Separate structural success from scientific and submission readiness.</p></article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="trust">
+        <div class="section-heading split">
+          <div>
+            <p class="kicker">TRUST THE BOUNDARIES</p>
+            <h2>Designed to expose uncertainty, not decorate it.</h2>
+          </div>
+          <p>
+            The workflow organizes evidence and handoffs. It does not guarantee novelty,
+            mathematical correctness, identification, publication, or exhaustive coverage.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article><h3>Resumable state</h3><p>Versioned records preserve the next action, blocker, and resume condition across sessions.</p></article>
+          <article><h3>Proof lineage interface</h3><p>A public hash-bound framework connects theory stages without bundling private theorem content.</p></article>
+          <article><h3>Non-regression contracts</h3><p>Material revisions state what must improve, what cannot regress, and when to roll back.</p></article>
+          <article><h3>Reproducible package</h3><p>Deterministic archives include internal hashes, external checksums, CI, and provenance attestations.</p></article>
+        </div>
+      </section>
+
+      <section class="section callout reveal">
+        <p class="kicker">RESEARCH PREVIEW</p>
+        <h2>Try it on a synthetic project—or bring a real research folder.</h2>
+        <p>
+          Start with the privacy-safe example, report what breaks, and help shape a workflow that
+          researchers can inspect rather than merely trust.
+        </p>
+        <div class="hero-actions centered">
+          <a class="button primary" href="https://github.com/XuQingAcademic/research-paper-workflow/tree/main/examples/minimal-paper">Open the example</a>
+          <a class="button secondary" href="https://github.com/XuQingAcademic/research-paper-workflow/blob/main/docs/SYNTHETIC_CASE_STUDY.md">Read the case study</a>
+          <a class="button secondary" href="https://github.com/XuQingAcademic/research-paper-workflow/discussions">Join the discussion</a>
+          <a class="button secondary" href="https://github.com/XuQingAcademic/research-paper-workflow/issues">Report an issue</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Research Paper Workflow</strong>
+        <p>Created by XuQing · MIT License</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/XuQingAcademic/research-paper-workflow">Repository</a>
+        <a href="https://github.com/XuQingAcademic/research-paper-workflow/blob/main/docs/QUICKSTART.md">Quick start</a>
+        <a href="https://github.com/XuQingAcademic/research-paper-workflow/blob/main/SECURITY.md">Security</a>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

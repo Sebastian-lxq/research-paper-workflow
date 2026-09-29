@@ -1,6 +1,6 @@
 # Publication readiness
 
-## Locally complete for v0.1.0
+## Locally complete for v0.1.1
 
 - [x] Portable Agent Plugin manifest and Codex compatibility manifest.
 - [x] Repo-local marketplace with a stable plugin identifier.
@@ -11,6 +11,11 @@
       contact email; ORCID remains optional and omitted, and no companion paper
       is required.
 - [x] Two-command Git-backed installation and bilingual 60-second walkthrough.
+- [x] A 60-second animated synthetic demo and a standalone GitHub Pages site.
+- [x] An isolated `skills.sh` CLI discovery and installation check for the
+      packaged `SKILL.md` tree.
+- [x] A public pilot guide, dedicated feedback form, and reusable bilingual
+      launch materials.
 - [x] Public Plugins Directory listing copy, starter prompts, and five positive
       plus three negative review cases prepared in a source-controlled packet.
 - [x] Human-readable and machine-readable third-party provenance.

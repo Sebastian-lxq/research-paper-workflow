@@ -73,7 +73,7 @@ an Action that appears in a workflow without a matching attribution record.
 The workflow also recognizes `mine-econometrics-ideas`,
 `prove-econometrics-theory-v2`, `audit-numerical-simulations-v2`, and
 `write-econometrics-paper-v3`. They are first-party companion interfaces, are
-not bundled in v0.1.0, and must not be represented as third-party work.
+not bundled in v0.1.1, and must not be represented as third-party work.
 
 ## Contribution rule
 
